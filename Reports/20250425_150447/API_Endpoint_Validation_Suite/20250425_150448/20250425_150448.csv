@@ -1,0 +1,51 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_Endpoint_Validation_Suite,,,,25-04-2025 15:04:53,25-04-2025 15:04:57,4.104s,PASSED
+,,,,,,,
+Test Cases/TC_AirPollution_JakartaSelatan,,,,25-04-2025 15:04:53,25-04-2025 15:04:56,2.651s,PASSED
+"response = sendRequest(findTestObject(""GetCurrentAirPollution""))",,,,25-04-2025 15:04:54,25-04-2025 15:04:56,1.978s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.020s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.011s,PASSED
+json = slurper.parseText(response.getResponseText()),,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.024s,PASSED
+assert lon == 106.8107,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.012s,PASSED
+assert lat == -6.2615,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.004s,PASSED
+assert list.size() > 0,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.003s,PASSED
+assert aqi >= 1 && aqi <= 5,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.011s,PASSED
+assert co != null,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.001s,PASSED
+assert no != null,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.001s,PASSED
+assert no2 != null,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.002s,PASSED
+assert o3 != null,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.002s,PASSED
+assert so2 != null,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.003s,PASSED
+assert pm2_5 != null,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.003s,PASSED
+assert pm10 != null,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.003s,PASSED
+assert nh3 != null,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.001s,PASSED
+assert dt > 0,,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.003s,PASSED
+"println(""API Test passed!"")",,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.005s,PASSED
+"println(Location: Jakarta Selatan ($json.coord.lat, $json.coord.lon))",,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.033s,PASSED
+println(Air Quality Index: $json.list[0].main.aqi),,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.002s,PASSED
+println(CO level: $json.list[0].components.co),,,,25-04-2025 15:04:56,25-04-2025 15:04:56,0.002s,PASSED
+,,,,,,,
+Test Cases/TC_WeatherForecast_JakartaSelatan_5Day,,,,25-04-2025 15:04:56,25-04-2025 15:04:57,0.794s,PASSED
+"response = sendRequest(findTestObject(""GetForecast5Days""))",,,,25-04-2025 15:04:56,25-04-2025 15:04:57,0.414s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.004s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.003s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseText()),,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.005s,PASSED
+"verifyElementPropertyValue(response, ""cod"", ""200"")",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.048s,PASSED
+"verifyElementPropertyValue(response, ""message"", 0)",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.040s,PASSED
+"assert list != null : ""List element is missing""",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.002s,PASSED
+"assert city != null : ""City element is missing""",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.002s,PASSED
+"verifyElementPropertyValue(response, ""city.name"", ""Rawa Barat"")",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.033s,PASSED
+"verifyElementPropertyValue(response, ""city.country"", ""ID"")",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.030s,PASSED
+"assert list.size() >= 30 : ""Expected at least 30 forecast intervals for 5 days""",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.002s,PASSED
+firstDate = dt_txt,,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.002s,PASSED
+"assert firstDate =~ ""\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}""",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.011s,PASSED
+temp = temp,,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.003s,PASSED
+assert temp > 260 && temp < 330,,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.001s,PASSED
+firstEntry = list[0],,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.002s,PASSED
+"assert weather != null && weather.size() > 0 : ""Weather data missing""",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.003s,PASSED
+"assert humidity >= 0 && humidity <= 100 : ""Invalid humidity value""",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.001s,PASSED
+"assert wind != null : ""Wind data missing""",,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.004s,PASSED
+dates =  }).unique(),,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.015s,PASSED
+assert dates.size() >= 5,,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.002s,PASSED
+println(Successfully verified 5-day forecast for $jsonResponse.city.name),,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.003s,PASSED
+println(Temperature range: $jsonResponse.list.collect({ -> ... }).min()K to $jsonResponse.list.collect({ -> ... }).max()K),,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.010s,PASSED
+println(Forecast period: $jsonResponse.list.first().dt_txt to $jsonResponse.list.last().dt_txt),,,,25-04-2025 15:04:57,25-04-2025 15:04:57,0.004s,PASSED

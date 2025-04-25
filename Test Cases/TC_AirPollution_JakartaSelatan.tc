@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_AirPollution_JakartaSelatan</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8f1166e5-b4b9-43e5-9f98-8861309131d0</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Weather_API_Test_Suite" time="4.124" tests="2" failures="0" errors="0">
+   <testsuite name="Weather_API_Test_Suite" tests="2" failures="0" errors="0" time="4.124" skipped="0" timestamp="25-04-2025T14:04:47" hostname="rchez - Nabella" id="Test Suites/Weather_API_Test_Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\rchez\\Katalon Studio\\QA-test\\Reports\\20250425_140443\\Weather_API_Test_Suite\\20250425_140443"/>
+         <property name="logFiles" value="C:\\Users\\rchez\\Katalon Studio\\QA-test\\Reports\\20250425_140443\\Weather_API_Test_Suite\\20250425_140443\\console0.log, C:\\Users\\rchez\\Katalon Studio\\QA-test\\Reports\\20250425_140443\\Weather_API_Test_Suite\\20250425_140443\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Naufal Yaafi"/>
+         <property name="hostName" value="rchez - Nabella"/>
+         <property name="hostAddress" value="192.168.241.8"/>
+         <property name="projectName" value="QA-test"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.2.0.0"/>
+      </properties>
+      <testcase name="Test Cases/TC_AirPollution_JakartaSelatan" time="2.834" classname="Test Cases/TC_AirPollution_JakartaSelatan" status="PASSED">
+         <system-out><![CDATA[25-04-2025T14:04:48 - [TEST_CASE][PASSED] - Test Cases/TC_AirPollution_JakartaSelatan: Test Cases/TC_AirPollution_JakartaSelatan
+
+25-04-2025T14:04:48 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("GetCurrentAirPollution")): Send request successfully
+
+25-04-2025T14:04:50 - [MESSAGE][INFO] - HAR: C:\Users\rchez\Katalon Studio\QA-test\Reports\20250425_140443\Weather_API_Test_Suite\20250425_140443\requests\main\GetCurren...llution_0.har
+
+25-04-2025T14:04:51 - [MESSAGE][PASSED] - Send request successfully
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-04-2025T14:04:51 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - json = slurper.parseText(response.getResponseText()): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert lon == 106.806: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert lat == -6.269: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert list.size() > 0: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert aqi >= 1 && aqi <= 5: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert co != null: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert no != null: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert no2 != null: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert o3 != null: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert so2 != null: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert pm2_5 != null: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert pm10 != null: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert nh3 != null: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert dt > 0: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - println("API Test passed!"): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - println(Location: Jakarta Selatan ($json.coord.lat, $json.coord.lon)): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - println(Air Quality Index: $json.list[0].main.aqi): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - println(CO level: $json.list[0].components.co): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC_WeatherForecast_JakartaSelatan_5Day" time="0.763" classname="Test Cases/TC_WeatherForecast_JakartaSelatan_5Day" status="PASSED">
+         <system-out><![CDATA[25-04-2025T14:04:51 - [TEST_CASE][PASSED] - Test Cases/TC_WeatherForecast_JakartaSelatan_5Day: Test Cases/TC_WeatherForecast_JakartaSelatan_5Day
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("GetForecastJakartaSelatan")): Send request successfully
+
+25-04-2025T14:04:51 - [MESSAGE][INFO] - HAR: C:\Users\rchez\Katalon Studio\QA-test\Reports\20250425_140443\Weather_API_Test_Suite\20250425_140443\requests\main\GetForeca...Selatan_1.har
+
+25-04-2025T14:04:51 - [MESSAGE][PASSED] - Send request successfully
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+25-04-2025T14:04:51 - [MESSAGE][PASSED] - Verify response status code successfully
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(response.getResponseText()): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "cod", "200"): Verify element property value successfully
+
+25-04-2025T14:04:51 - [MESSAGE][PASSED] - Verify element property value successfully
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "message", 0): Verify element property value successfully
+
+25-04-2025T14:04:51 - [MESSAGE][PASSED] - Verify element property value successfully
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert list != null : "List element is missing": null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert city != null : "City element is missing": null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "city.name", "Rawa Barat"): Verify element property value successfully
+
+25-04-2025T14:04:51 - [MESSAGE][PASSED] - Verify element property value successfully
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "city.country", "ID"): Verify element property value successfully
+
+25-04-2025T14:04:51 - [MESSAGE][PASSED] - Verify element property value successfully
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert list.size() >= 30 : "Expected at least 30 forecast intervals for 5 days": null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - firstDate = dt_txt: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert firstDate =~ "\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}": null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - temp = temp: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert temp > 260 && temp < 330: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - firstEntry = list[0]: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert weather != null && weather.size() > 0 : "Weather data missing": null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert humidity >= 0 && humidity <= 100 : "Invalid humidity value": null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert wind != null : "Wind data missing": null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - dates =  }).unique(): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - assert dates.size() >= 5: null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - println(Successfully verified 5-day forecast for $jsonResponse.city.name): null
+
+25-04-2025T14:04:51 - [TEST_STEP][PASSED] - println(Temperature range: $jsonResponse.list.collect({ -> ... }).min()K to $jsonResponse.list.collect({ -> ... }).max()K): null
+
+25-04-2025T14:04:52 - [TEST_STEP][PASSED] - println(Forecast period: $jsonResponse.list.first().dt_txt to $jsonResponse.list.last().dt_txt): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[25-04-2025T14:04:47 - [TEST_SUITE][PASSED] - Weather_API_Test_Suite: Test Cases/TC_WeatherForecast_JakartaSelatan_5Day]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

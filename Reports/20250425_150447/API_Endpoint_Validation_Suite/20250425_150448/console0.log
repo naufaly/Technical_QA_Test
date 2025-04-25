@@ -1,0 +1,70 @@
+2025-04-25 15:04:53.137 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/API_Endpoint_Validation_Suite
+2025-04-25 15:04:53.244 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Naufal Yaafi
+2025-04-25 15:04:53.247 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = Technical-QA-Test
+2025-04-25 15:04:53.247 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = rchez - Nabella
+2025-04-25 15:04:53.247 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-04-25 15:04:53.249 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 192.168.241.8
+2025-04-25 15:04:53.249 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.2.0.0
+2025-04-25 15:04:53.808 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-04-25 15:04:53.808 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC_AirPollution_JakartaSelatan
+2025-04-25 15:04:54.319 DEBUG t.TC_AirPollution_JakartaSelatan         - 1: response = sendRequest(findTestObject("GetCurrentAirPollution"))
+2025-04-25 15:04:56.198 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\rchez\git\Technical-QA-Test\Reports\20250425_150447\API_Endpoint_Validation_Suite\20250425_150448\requests\main\GetCurren...llution_0.har
+2025-04-25 15:04:56.299 DEBUG t.TC_AirPollution_JakartaSelatan         - 2: verifyResponseStatusCode(response, 200)
+2025-04-25 15:04:56.321 DEBUG t.TC_AirPollution_JakartaSelatan         - 3: slurper = new groovy.json.JsonSlurper()
+2025-04-25 15:04:56.333 DEBUG t.TC_AirPollution_JakartaSelatan         - 4: json = slurper.parseText(response.getResponseText())
+2025-04-25 15:04:56.357 DEBUG t.TC_AirPollution_JakartaSelatan         - 5: assert lon == 106.8107
+2025-04-25 15:04:56.369 DEBUG t.TC_AirPollution_JakartaSelatan         - 6: assert lat == -6.2615
+2025-04-25 15:04:56.371 DEBUG t.TC_AirPollution_JakartaSelatan         - 7: assert list.size() > 0
+2025-04-25 15:04:56.374 DEBUG t.TC_AirPollution_JakartaSelatan         - 8: assert aqi >= 1 && aqi <= 5
+2025-04-25 15:04:56.387 DEBUG t.TC_AirPollution_JakartaSelatan         - 9: assert co != null
+2025-04-25 15:04:56.388 DEBUG t.TC_AirPollution_JakartaSelatan         - 10: assert no != null
+2025-04-25 15:04:56.391 DEBUG t.TC_AirPollution_JakartaSelatan         - 11: assert no2 != null
+2025-04-25 15:04:56.394 DEBUG t.TC_AirPollution_JakartaSelatan         - 12: assert o3 != null
+2025-04-25 15:04:56.398 DEBUG t.TC_AirPollution_JakartaSelatan         - 13: assert so2 != null
+2025-04-25 15:04:56.400 DEBUG t.TC_AirPollution_JakartaSelatan         - 14: assert pm2_5 != null
+2025-04-25 15:04:56.404 DEBUG t.TC_AirPollution_JakartaSelatan         - 15: assert pm10 != null
+2025-04-25 15:04:56.407 DEBUG t.TC_AirPollution_JakartaSelatan         - 16: assert nh3 != null
+2025-04-25 15:04:56.410 DEBUG t.TC_AirPollution_JakartaSelatan         - 17: assert dt > 0
+2025-04-25 15:04:56.413 DEBUG t.TC_AirPollution_JakartaSelatan         - 18: println("API Test passed!")
+API Test passed!
+2025-04-25 15:04:56.418 DEBUG t.TC_AirPollution_JakartaSelatan         - 19: println(Location: Jakarta Selatan ($json.coord.lat, $json.coord.lon))
+Location: Jakarta Selatan (-6.2615, 106.8107)
+2025-04-25 15:04:56.451 DEBUG t.TC_AirPollution_JakartaSelatan         - 20: println(Air Quality Index: $json.list[0].main.aqi)
+Air Quality Index: 1
+2025-04-25 15:04:56.455 DEBUG t.TC_AirPollution_JakartaSelatan         - 21: println(CO level: $json.list[0].components.co)
+CO level: 85.5
+2025-04-25 15:04:56.458 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC_AirPollution_JakartaSelatan
+2025-04-25 15:04:56.464 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-04-25 15:04:56.464 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC_WeatherForecast_JakartaSelatan_5Day
+2025-04-25 15:04:56.608 DEBUG t.TC_AirPollution_JakartaSelatan         - 1: response = sendRequest(findTestObject("GetForecast5Days"))
+2025-04-25 15:04:57.018 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\rchez\git\Technical-QA-Test\Reports\20250425_150447\API_Endpoint_Validation_Suite\20250425_150448\requests\main\GetForecast5Days_1.har
+2025-04-25 15:04:57.024 DEBUG t.TC_AirPollution_JakartaSelatan         - 2: verifyResponseStatusCode(response, 200)
+2025-04-25 15:04:57.028 DEBUG t.TC_AirPollution_JakartaSelatan         - 3: jsonSlurper = new groovy.json.JsonSlurper()
+2025-04-25 15:04:57.030 DEBUG t.TC_AirPollution_JakartaSelatan         - 4: jsonResponse = jsonSlurper.parseText(response.getResponseText())
+2025-04-25 15:04:57.034 DEBUG t.TC_AirPollution_JakartaSelatan         - 5: verifyElementPropertyValue(response, "cod", "200")
+2025-04-25 15:04:57.084 DEBUG t.TC_AirPollution_JakartaSelatan         - 6: verifyElementPropertyValue(response, "message", 0)
+2025-04-25 15:04:57.125 DEBUG t.TC_AirPollution_JakartaSelatan         - 7: assert list != null : "List element is missing"
+2025-04-25 15:04:57.128 DEBUG t.TC_AirPollution_JakartaSelatan         - 8: assert city != null : "City element is missing"
+2025-04-25 15:04:57.130 DEBUG t.TC_AirPollution_JakartaSelatan         - 9: verifyElementPropertyValue(response, "city.name", "Rawa Barat")
+2025-04-25 15:04:57.163 DEBUG t.TC_AirPollution_JakartaSelatan         - 10: verifyElementPropertyValue(response, "city.country", "ID")
+2025-04-25 15:04:57.193 DEBUG t.TC_AirPollution_JakartaSelatan         - 11: assert list.size() >= 30 : "Expected at least 30 forecast intervals for 5 days"
+2025-04-25 15:04:57.196 DEBUG t.TC_AirPollution_JakartaSelatan         - 12: firstDate = dt_txt
+2025-04-25 15:04:57.197 DEBUG t.TC_AirPollution_JakartaSelatan         - 13: assert firstDate =~ "\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}"
+2025-04-25 15:04:57.209 DEBUG t.TC_AirPollution_JakartaSelatan         - 14: temp = temp
+2025-04-25 15:04:57.212 DEBUG t.TC_AirPollution_JakartaSelatan         - 15: assert temp > 260 && temp < 330
+2025-04-25 15:04:57.213 DEBUG t.TC_AirPollution_JakartaSelatan         - 16: firstEntry = list[0]
+2025-04-25 15:04:57.215 DEBUG t.TC_AirPollution_JakartaSelatan         - 17: assert weather != null && weather.size() > 0 : "Weather data missing"
+2025-04-25 15:04:57.216 DEBUG t.TC_AirPollution_JakartaSelatan         - 18: assert humidity >= 0 && humidity <= 100 : "Invalid humidity value"
+2025-04-25 15:04:57.219 DEBUG t.TC_AirPollution_JakartaSelatan         - 19: assert wind != null : "Wind data missing"
+2025-04-25 15:04:57.221 DEBUG t.TC_AirPollution_JakartaSelatan         - 20: dates =  }).unique()
+2025-04-25 15:04:57.238 DEBUG t.TC_AirPollution_JakartaSelatan         - 21: assert dates.size() >= 5
+2025-04-25 15:04:57.240 DEBUG t.TC_AirPollution_JakartaSelatan         - 22: println(Successfully verified 5-day forecast for $jsonResponse.city.name)
+Successfully verified 5-day forecast for Rawa Barat
+2025-04-25 15:04:57.243 DEBUG t.TC_AirPollution_JakartaSelatan         - 23: println(Temperature range: $jsonResponse.list.collect({ -> ... }).min()K to $jsonResponse.list.collect({ -> ... }).max()K)
+Temperature range: 298.93K to 306K
+2025-04-25 15:04:57.253 DEBUG t.TC_AirPollution_JakartaSelatan         - 24: println(Forecast period: $jsonResponse.list.first().dt_txt to $jsonResponse.list.last().dt_txt)
+Forecast period: 2025-04-25 09:00:00 to 2025-04-30 06:00:00
+2025-04-25 15:04:57.257 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC_WeatherForecast_JakartaSelatan_5Day
+2025-04-25 15:04:57.329 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-04-25 15:04:57.329 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/API_Endpoint_Validation_Suite
+2025-04-25 15:04:57.329 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================
